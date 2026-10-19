@@ -12,7 +12,7 @@
   var total = 0;
   D.works.forEach(function (w, i) {
     w.id = 'w' + i;
-    w.key = norm(w.n) + '|' + norm(w.y);
+    w.key = norm(w.n) + '|' + norm(w.y) + (w.k ? '|' + norm(w.k) : '');
     w.c.forEach(function (c) { c.key = norm(c[0]) + '|' + norm(c[1]); });
     total += w.c.length;
   });
