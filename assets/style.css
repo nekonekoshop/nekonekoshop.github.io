@@ -297,3 +297,7 @@ footer nav a{color:var(--ink);font-weight:700;text-decoration:none}
   .news li{grid-template-columns:50px 1fr;gap:8px}
   .news time{font-size:13px}
 }
+
+/* ご協力のお願い */
+.cmp.report{margin-top:18px;border-color:var(--lav);background:linear-gradient(135deg,#fff 0%,#fff 60%,#efe9ff 100%)}
+.cmp.report .ribbon{background:var(--lav)}
