@@ -71,3 +71,14 @@
 .reqbar .cta > div{flex:1}
 .reqbar .cta .btn{margin:0;align-self:center}
 @media (max-width:760px){.reqbar .cta{flex-direction:column;align-items:stretch}.reqbar .cta .btn{align-self:stretch}.work{padding:12px}}
+/* 新着キャラ（NEW） */
+.ghead.nw span{width:auto;padding:0 12px;font-size:15px;background:var(--sun);color:var(--navy)}
+.ghead.nw em{font-style:normal;font-weight:800;font-size:15px;color:var(--ink)}
+.newbox{background:#fff;border-radius:18px;padding:14px;margin:0 0 6px;border:3px dashed #ffe08a;box-shadow:0 4px 0 rgba(122,96,170,.08),0 10px 22px rgba(122,96,170,.10)}
+.nday+.nday{margin-top:12px;padding-top:12px;border-top:2px dotted var(--line)}
+.nday>b{display:inline-block;font-size:12.5px;font-weight:800;color:var(--ink-soft);margin-bottom:6px}
+.chip.nchip{background:var(--sun-l);color:var(--ink);display:inline-flex;align-items:baseline;gap:6px}
+.chip.nchip:hover{background:#ffeaa6}
+.chip.nchip small{font-size:11px;font-weight:700;color:var(--ink-soft)}
+.nbadge{font-style:normal;font-family:var(--pop);font-size:9.5px;letter-spacing:.04em;background:var(--sun);color:var(--navy);border-radius:999px;padding:1px 6px;margin-left:5px;vertical-align:1px}
+.kana a.knew{background:var(--sun);color:var(--navy);font-size:12px}
