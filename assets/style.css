@@ -305,3 +305,18 @@ footer nav a{color:var(--ink);font-weight:700;text-decoration:none}
 @media (max-width:420px){.quick a{font-size:10.5px;padding:10px 2px 8px;letter-spacing:-.04em}.quick .ic{width:34px;height:34px;border-radius:11px}.quick .ic svg{width:19px;height:19px}}
 .need3{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
 .need3 span{background:#fff;color:#1b8fd0;border:2px solid var(--sky-l);border-radius:999px;padding:2px 12px;font-weight:800;font-size:13.5px;white-space:nowrap}
+
+/* スマホだけ：キャラ一覧の大ボタン */
+.sp-list{display:none}
+@media (max-width:760px){
+  .sp-list{display:flex;align-items:center;gap:12px;margin:18px 0 0;padding:10px 12px 10px 10px;border-radius:22px;text-decoration:none;color:var(--ink);
+    background:linear-gradient(135deg,#fff 40%,#efe9ff);border:3px solid var(--lav);box-shadow:var(--shadow)}
+  .sp-list .pic{flex:none;width:62px;height:62px;border-radius:16px;overflow:hidden;border:3px solid #fff;box-shadow:0 3px 0 rgba(45,42,90,.1)}
+  .sp-list .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+  .sp-list .txt{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.35}
+  .sp-list .nb{align-self:flex-start;background:var(--sun);color:var(--navy);font-family:var(--pop);font-size:11px;padding:1px 8px;border-radius:999px;margin-bottom:3px}
+  .sp-list b{font-size:17px;font-weight:800}
+  .sp-list small{font-size:12px;color:var(--ink-soft);font-weight:700}
+  .sp-list .go{flex:none;width:36px;height:36px;border-radius:50%;background:var(--lav);color:#fff;display:grid;place-items:center}
+  .quick{margin-top:12px}
+}
