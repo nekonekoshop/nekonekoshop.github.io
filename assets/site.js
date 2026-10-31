@@ -76,3 +76,14 @@
   window.addEventListener('hashchange', openHash);
   openHash();
 })();
+
+// 期限つきのお知らせ（data-until の日付以降は「終了」表示にする。PICK UP は隠す）
+(function () {
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  [].slice.call(document.querySelectorAll('[data-until]')).forEach(function (el) {
+    var d = new Date(el.getAttribute('data-until') + 'T00:00:00');
+    if (isNaN(d) || today < d) return;
+    if (el.classList.contains('latest')) el.style.display = 'none';
+    else el.classList.add('ended');
+  });
+})();
