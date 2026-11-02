@@ -48,20 +48,39 @@ img{max-width:100%;height:auto;display:block}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
 .h{font-family:var(--pop);font-weight:400;font-size:19px;margin:0 0 12px;display:flex;align-items:center;gap:8px}
 .h .no{flex:none;width:30px;height:30px;border-radius:50%;background:var(--sun);color:var(--navy);display:grid;place-items:center;font-size:15px}
-.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;text-align:center}
-.vs > div{border-radius:16px;padding:14px 8px;background:#f4f1fa}
-.vs > div.on{background:var(--pink-l);color:var(--pink-d)}
-.vs b{display:block;font-family:var(--pop);font-weight:400;font-size:34px;line-height:1.3}
-.vs .arr{font-size:24px;color:var(--pink)}
-.sim .nums{display:flex;flex-wrap:wrap;gap:8px}
-.sim .nums button{font:inherit;font-weight:800;font-size:16px;border-radius:999px;border:2.5px solid var(--line);background:#fff;color:var(--ink);padding:6px 16px;cursor:pointer}
-.sim .nums button.on{background:var(--pink);border-color:var(--pink);color:#fff}
-.sim .res{margin-top:14px;display:grid;gap:8px}
-.sim .res div{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#f9f7fd;border-radius:14px;padding:10px 14px;font-weight:800}
-.rk{display:inline-grid;place-items:center;min-width:40px;height:32px;padding:0 10px;border-radius:999px;color:#fff;font-family:var(--pop);font-weight:400;font-size:15px}
+/* 商品カード（絵で枚数を見せる） */
+.tiles{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tl{width:36px;height:48px;border-radius:7px;display:grid;place-items:center;color:#fff;font-family:var(--pop);font-weight:400;font-size:14px;border:2px solid #fff;box-shadow:0 3px 0 rgba(45,42,90,.10);flex:none}
+.tl.B{background:#9aa3b8}.tl.A{background:#5fb7f0}.tl.S{background:#a77cf0}.tl.SS{background:linear-gradient(135deg,#ff6fa8,#ffb340);font-size:12px}
+.tl.gift{background:linear-gradient(90deg,transparent 43%,#ffd23f 43% 57%,transparent 57%),linear-gradient(transparent 38%,#ffd23f 38% 52%,transparent 52%),#ff6fa8;animation:pop .5s ease-out both}
+.tl.new{animation:pop .4s ease-out both}
+@keyframes pop{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
+.rk{display:inline-grid;place-items:center;min-width:40px;height:32px;padding:0 10px;border-radius:999px;color:#fff;font-family:var(--pop);font-weight:400;font-size:15px;vertical-align:middle}
 .rk.B{background:#9aa3b8}.rk.A{background:#5fb7f0}.rk.S{background:#a77cf0}.rk.SS{background:linear-gradient(135deg,#ff6fa8,#ffb340)}
 .gift{color:var(--pink-d)}
-.sim .res .cap{margin:0;font-weight:800;color:var(--ink-soft);font-size:14px}
+.big{font-family:var(--pop);font-weight:400;line-height:1.45}
+/* いつも vs いまだけ */
+.cmp{display:grid;gap:12px}
+.cmp .ln{display:grid;grid-template-columns:84px 1fr auto;gap:12px;align-items:center;background:#f6f3fb;border-radius:16px;padding:12px 14px}
+.cmp .ln.now{background:var(--pink-l);position:relative}
+.cmp .ln b{font-family:var(--pop);font-weight:400;font-size:17px;line-height:1.4}
+.cmp .ln.now b{color:var(--pink-d)}
+.cmp .ln .to{display:flex;align-items:center;gap:6px;font-weight:800;font-size:20px;color:var(--pink)}
+.stamp{position:absolute;right:-6px;top:-14px;background:var(--sun);color:var(--navy);font-family:var(--pop);font-size:16px;border-radius:999px;padding:2px 14px;transform:rotate(6deg);border:3px solid #fff}
+/* シミュレーター */
+.sim .pick{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.sim .pick button{font:inherit;font-weight:800;font-size:16px;border-radius:999px;border:2.5px solid var(--line);background:#fff;color:var(--ink);padding:7px 18px;cursor:pointer}
+.sim .pick button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.sim .pick.cnt button.on{background:var(--pink);border-color:var(--pink)}
+.sim .stage{background:#f9f7fd;border-radius:18px;padding:14px;display:grid;gap:10px;margin-top:4px}
+.sim .lab{font-weight:800;font-size:14px;color:var(--ink-soft)}
+.sim .down{text-align:center;font-size:26px;line-height:1;color:var(--pink)}
+.sim .msg{text-align:center;font-size:clamp(20px,3.4vw,26px);margin-top:4px}
+.sim .msg small{display:block;font-family:var(--round);font-size:15px;font-weight:800;color:var(--ink-soft)}
+/* ランクの説明 */
+.ladder{display:flex;align-items:flex-end;gap:8px;justify-content:center;margin:6px 0 10px}
+.ladder div{text-align:center;font-weight:800;font-size:13px;color:var(--ink-soft)}
+.ladder .rk{display:grid;margin:0 auto 4px}
 .steps{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:10px}
 .steps li{counter-increment:s;display:flex;gap:12px;align-items:flex-start;font-weight:800}
 .steps li::before{content:counter(s);flex:none;width:28px;height:28px;border-radius:50%;background:var(--sky);color:#fff;display:grid;place-items:center;font-size:14px;margin-top:2px}
@@ -75,7 +94,7 @@ details.note ul{margin:12px 0 0;padding-left:1.3em;font-size:15px}
 .ended{background:#3d3354;color:#fff;border-radius:16px;padding:12px 18px;font-weight:800;margin-bottom:16px;text-align:center}
 .foot{text-align:center;margin-top:26px;font-size:14px;color:var(--ink-soft)}
 .foot a{color:var(--pink-d);font-weight:800}
-@media (max-width:760px){.sim .nums{gap:6px}.sim .nums button{padding:6px 12px;font-size:15px}.hero{grid-template-columns:1fr 110px;padding:16px}.grid{grid-template-columns:1fr}.vs b{font-size:28px}}
+@media (max-width:760px){.sim .pick{gap:6px}.sim .pick button{padding:6px 12px;font-size:15px}.hero{grid-template-columns:1fr 84px;padding:16px;gap:10px}.hero h1{font-size:22px}.hero .period{font-size:15px}.sim .msg{font-size:18px}.grid{grid-template-columns:1fr}.tl{width:30px;height:40px;font-size:12px}.tl.SS{font-size:10px}.cmp .ln{grid-template-columns:1fr auto}.cmp .ln b{grid-column:1/-1}}
 </style>
 </head>
 <body>
@@ -100,7 +119,7 @@ details.note ul{margin:12px 0 0;padding-left:1.3em;font-size:15px}
   <div class="foot"><a href="../">ねこねこショップ☆ お知らせHPへ</a></div>
 </div>
 
-<script id="payload" type="application/json">{"id": "halloween2026", "iter": 250000, "salt": "EISAG3q/tb5HPgd1vj5gjQ==", "iv": "HZe5skgSZGojlvvk", "data": "iIU8O+1YvHn36eSRX8nkLer4UYM14Rw+wlmMBbwNRobyKgnwvkCvbyy1+aMMftCQ78LlDO+dju2TSIssJoRgD1ng0oV2MlIfJpezBDlOTp+EYOnWP7XwBZRhNgRGwfM5AiQZy05/Jw+mgrzUjww1Xq1lXUDmNARkDKClZpFB6R603zHN8SDAzU5AEi3ML3P7ZXwj311fjArZ7ZajefWpguuHKM1COBnLVUbTDceMtvuenRks1+vKvDSrbsOuhzfTMnZZBP87RTFivpdfYdFrbQEV33AwFlP5nzc61QfjLW+bxQF4RgV05tRFH4UrY72whGDAQY2hGksTt+KPYt57TAkvCuax2SkN9H+wRHTBZcS0GBIZgwCu2gjCSd4lEAHo58t2/uTXwtUxNXyr4FWQyBOsKmYeV8Iu22DK67a7/S5FIASusc09CbBvj7pqz0vz1wghZ1L9oqsbqQBWlstpX6cXYON8+0V4x5JT61pMETVRdoMCHe5wjiLr/DBvgTaw+SA7E8nL5PUJwjBCcQSIjqWLKyeMqQCONRUzavubI23BBzbbEZHIn/KBAryt81CqotJ7NTC09eck5fKakRMPcd9XLaeVv1wfB7VmC8hXNvtD6qLc5i9HfFABDf/T+fUDVvLM++Uk7bzsv460d1zohPPq5XUgyUsoqMvrGqJKvQskKGjj6gJ106xBhmhM8V0Puxu13hqKeW+8yF6/UWWtlHKviIoPOVrs72CmHwrlbuNIBbgtnUgkiZnaOBj4/Xmoza+EBWYrU0rMzEZDQV0mTbNZv4VDWblKrghjgkwPZ/6eRuAnRXmTNSmR8TDgoJkXm9JoT87z5LB36N+PAWEL0AwYmeAdmIBZP2JkPzA01DBV0CYimIyJyYCuVmhZBY2WHN3/vjFgPDT0zMRKRrpvzhXwcMy8bFHzXMxgqUGJTkU8p7cLShQF4npwfQbym1Y2pqklPq/hF9QQBB1ZVz2g5F2B3paTpQ5xITQ1rAq6Uk1zHYcjmgYHa/P/B8pDiRWrHJmsEGSkGHqLqrIhD/7BCRwu+9rI0TdbnpB1BHWd9HNnXNMc1FyrDeSBMlZdluRmEfCGMqVmpLjpP2Ckyga+XUfU0bRwM3GsMxtIVK6aabtx+DUo2emMkW69J8hUqAFeqAy7UPDtwOsXAUsoCEp+Xz9mAcc/N7BUSCA3YoWCcor08+O/puL26u4eCsoOmtH+rIp+oNdiWGhXgVSTZwmtigikDVcxzOcaiDzbSHn7j3ccWlJYynMQAyH6cG1YmH1p8lOae0P9W8iUApeJLH37blXMTUVvCBAMh1TlRL7zWCTyzYzfOUuZgYc2brOfqOceHQLjvwKW0G5FiXQdrGwVELnbkJhXDPUriNgi7+2Lezour427sxhd3juQvfMwa8Ge4NbdLursdNLY3BShC/yd28/dNtsjYfqUq5nivy7zTB/+ijEAvuc97/JiMMkOPxIF+3bDPzyRmWFfYgZfJMEDRxKMKTI+gUsVW25AfwNSdQPNNK/lB3gTKnGfyTPfhdDFAtl3MWHwlb2nl4EAqkTlC55R0frRm4vvx2wN6A9iF0XFf7qps9S80xoTGuyWdlTwp2vu+SbnbGMr6hvUmMkX2cE+EH9X98qgiIKBp2+aQKXKdppaegbADwhWyEtt1rN78Vt8XyeeT0Gj8dJ5TETEdCeICja+Ovjfr6Wxpeai9JDqu4ltNojGQfZxpi97xGoxyvmPCH4ChX5QJbqWPA2jXzCUPOHlPo8fUPz0sKXMcNWCnmwbLwORflBukmjg/nCS9QRXmN4rc2xLIDIxCDIQXuI2BZNUYljWm8qXJbJRfRrFLevDpnOQso7jnIQN7Hwy9tgt4SQmQTNAO37JzKSLDeEnOjh+w0NcC71pIrvA4yPSkeZf6TfU/mGBXdowag9EFZDzoAb8s411UwodiXai5mARZiOglmlsdkdRLTGya6zlq4nNjoCQEscBJN2VY4/M4QFBO9ocfunR6qR4vuLXcCB4cmt2SNTVHNdxNBpV9RNFX/NwK6JuCD89+nI0ZVUzHFp37isFKhEyPTqnriAQ0CyncDqPn3T+eOuKvoR7X/tjyD72YLdOIbMrDgJHYQxULJC6ROm+h4h1qES9WhdeQtWm7ut+2Xy6/Hlzj7GIXBHG7it+M45PHBVgzsBbZ4bbzAUTTUG5S8OIa/n5Amx+sGZfGPo63bJ0f1YH7xUXtUHeFlmJMog8QS9e0p6YG9UHkz7hkz5XqPlau7yVzQa8aRPZefG2uOEEVdHF7USPUiTMUEaKYL39KbsLTpo7Syhb5TZXSosL7WDFZ5A7sWH9RvbVfaGmsA72dDnW6M9dbLEbXvsF2+TfzIm6oWjGWBVS/1/52n5TJZh0GyMH7mMpJFEKzLuq0lL69Zc5xHqH4GPPNBmp8SSR1MuDSqUkVfs3TiPW2Hlp/R+3nxqOgIuWL7oU+M/hqPa9h3abVNleetCHiUZ9H+pucI1Y/jdWbdc1L4t0sXKcqTB+7ijcbqgIGoyHSbn66OssQkhMp0c9kF8KZ6TaWE+34dUbSXxAj1yBN+KzervKFOYbsylnmhDcufzk10ngakJJrUmaXU+aGf8tEmg4BRonEZGeGq0JzypvBi2Eb7n380WNDhkYGHpsOTDDflxXCsGVU7RNEqj6sQjh7ko3ZXmnLgRGCS1iUmkxvDy2Rosgxu8AOf+3kha6ipgFMS3HijhPQbnuNoN4nteVci/Fqu6nTfe3ipfIeHMxD4aGs5wpMgV08OpwOpy0nLLsH4L8+pGWCX/3ZI2+nMUehaK+s67VUwjnFiPKFgm1NhSk70MkIXS7vDJj/vwCQdJeMSTq/3o2Vl8iF54EVv7GhfJFFIxSF1xGH+4/GZecT8FVsw5UUr3kW41sboWYk6+yg72FvV/WG1nlsoMjTcQevTiW1aNzGm6pJWCWpKmbqpCAS/zfJzhbJefZooxISdxoVXRR2i4d6PLpwoqiDEvX/cSXOUp08rxKCxTyIBBR05SyhcXi+cNm0QqxlU7HOQt9SRBxwGr3Y0GA5gMcX5tkPEChEeKJLnHSMdfWnGyD9fwCyGun7iyAyyTPC+3EYpAHYx4MMFSpAG/1vZb48+uomfjDiGc2YLYMgvbABenVkToUXWEnEUwqEs863PZGjX+ER0r6/GmEqvOP8MJdn+45vWw33jZc/zpcYhIeK7WBimjzBH86Zn3WZYJrWZx/GFsZSLT5PdBkL/PI/puy0UUffjwz9Hy7JE73ekJ7jbZerSkq0UKEzCAQVjX8JTb/cj77gFQEsiEmes3Eby+jLqr0esNHBzvKqWv2RmtKHJgKinvI6SI4J3vkinV7TY+ezggTU1XQvLXh0vR2CultOdC5HG9FkFNsLLsazKsgPyl0tB3pbrGge05sijHnwFJLJaYwLaCHFwMVhUIoz5xs+GhQmxkhO1BhfL3M3EocxmTCGhdwxzUOAmXDBUWqqYtw2MVlH00vEMRELtelDWsgMIl/FdPFTYwN0rUpXdtZvz+0/yu58dH6kGa98G+wpd8q/8gJ152bI7xyBrtV0yEAnjp12ixePJQxLS61YXHQ1Z2K4lSCwGHPnE02ktOe1wD6z7r6aVQgnOTY4FjfSCMfppnxxOBbjP5aKddVmI5X2RWonUNHWM4UmM3l6oA8R70ogoYr+1npvio86FRdYi9Z4r3L93cru+ffJGyImkRE46L5Hlxjy/h5vP/Gc+d9OP1kEM8MJg2nkjLKwkCtNj5cRD9Pp3yQYJoMR+tbXu0gV53knfgQdSQY2kG6mtPuHf+FgYI2JOGb9KQdgadq7/sdXp08DQ1p9gF0Zx9IDe5El84gOLtGZpkOKe2tRCRoDbHqhUAvA05Tpyo2IFEy/VqCEygltRIpdyS1QKOFemhoYMeNZxZh7XmIKcQLOGl4ROef1OuNKqM/E5T8yeudg1Ci2hNTcpwdQcCty3D2bmQjyfsBDjoM0S0ZM0HSmZSAV4OUEB8TiNub0jj92ooldnnnUSbeDTyw8lwnnh6v70xdiqQlAvqJZdJ3XCMuEQfma1j7DqUH1TbA8+X74fnGeRUCVZTOVrQEqyawfLA23UIV8QE6jLbrgbsZvMSCKbpypWKvyiVSp3aKnVyLyDeIwegfNokP7J/5du9QpdPGT8HWdGIDdKb6OSYjC+hOOy82S1SwPw29tRwRB0fnnyFPFvJ0lSEQsrxVJQX52l4Ylw+tsc2A9dv4IseMrl5LvlFD2mZ/+zc2zausuSOU4B+CiGbBHA=="}</script>
+<script id="payload" type="application/json">{"id": "halloween2026", "iter": 250000, "salt": "YEGS3TNkimAUr4ff+TQsbA==", "iv": "V3ulhZ2XIeYD7Rm5", "data": "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"}</script>
 <script>
 (function () {
   var P = JSON.parse(document.getElementById('payload').textContent);
@@ -119,19 +138,30 @@ details.note ul{margin:12px 0 0;padding-left:1.3em;font-size:15px}
     return new TextDecoder().decode(plain);
   }
   function setupSims(root) {
+    function tiles(n, cls) { var h = ''; for (var i = 0; i < n; i++) h += '<span class="tl ' + cls + '" style="animation-delay:' + (i * 30) + 'ms">' + (cls.indexOf('gift') < 0 ? cls.split(' ')[0] : '') + '</span>'; return h; }
+    root.querySelectorAll('[data-tiles]').forEach(function (el) { var t = el.dataset.tiles.split(':'); el.insertAdjacentHTML('afterbegin', tiles(+t[0], t[1])); });
+    // data-step 枚で1ランクアップ、それをこえたら data-step 枚ごとにおまけ1枚。data-map は「元>後」
     root.querySelectorAll('.sim').forEach(function (sim) {
-      var step = +sim.dataset.step, map = sim.dataset.map.split(','), res = sim.querySelector('.res');
-      function show(n) {
-        sim.querySelectorAll('.nums button').forEach(function (b) { b.classList.toggle('on', +b.dataset.n === n); });
-        var gift = Math.floor(n / step) - 1;
-        res.innerHTML = '<p class="cap">' + n + '枚まとめると…</p>' + map.map(function (m) {
-          var r = m.split('>');
-          return '<div><span class="rk ' + r[0] + '">' + r[0] + '</span>→<span class="rk ' + r[1] + '">' + r[1] + '</span>ランクに' +
-            (gift > 0 ? '<span class="gift">＋ ' + gift + '枚プレゼント</span>' : '') + '</div>';
-        }).join('');
+      var step = +sim.dataset.step, max = +(sim.dataset.max || 20), map = sim.dataset.map.split(',').map(function (m) { return m.split('>'); });
+      var st = { r: 0, n: step };
+      var h = '<div class="pick rank">' + map.map(function (r, i) { return '<button type="button" data-r="' + i + '"><span class="rk ' + r[0] + '">' + r[0] + '</span> の商品</button>'; }).join('') + '</div><div class="pick cnt">';
+      for (var n = step; n <= max; n += step) h += '<button type="button" data-n="' + n + '">' + n + '枚</button>';
+      sim.querySelector('.ctl').innerHTML = h + '</div>';
+      function show() {
+        var r = map[st.r], gift = Math.floor(st.n / step) - 1;
+        sim.querySelectorAll('[data-r]').forEach(function (b) { b.classList.toggle('on', +b.dataset.r === st.r); });
+        sim.querySelectorAll('[data-n]').forEach(function (b) { b.classList.toggle('on', +b.dataset.n === st.n); });
+        sim.querySelector('.stage').innerHTML =
+          '<div class="lab">まとめて落札すると…</div><div class="tiles">' + tiles(st.n, r[0]) + '</div>' +
+          '<div class="down">▼</div><div class="lab">とどくのは…</div><div class="tiles">' + tiles(st.n, r[1] + ' new') + tiles(gift, 'gift') + '</div>' +
+          '<div class="msg big">ぜんぶ <span class="rk ' + r[1] + '">' + r[1] + '</span> になる！' +
+          (gift > 0 ? '<br><span class="gift">さらに おまけ ' + gift + '枚 プレゼント！</span>' : '') + '</div>';
       }
-      sim.querySelectorAll('.nums button').forEach(function (b) { b.addEventListener('click', function () { show(+b.dataset.n); }); });
-      show(+sim.querySelector('.nums button').dataset.n);
+      sim.addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        if (b.dataset.r) st.r = +b.dataset.r; if (b.dataset.n) st.n = +b.dataset.n; show();
+      });
+      show();
     });
     var c = root.querySelector('[data-until]');
     if (c) {
