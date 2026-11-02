@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<link rel="stylesheet" href="assets/list.css?v=20261021">
+<link rel="stylesheet" href="assets/list.css?v=20261102">
 </head>
 <body>
 
@@ -159,12 +159,38 @@
 </div>
 
 <div class="wrap">
+  <!-- NEW欄の下に list.js が差し込む（検索中は出さない） -->
+  <div class="nextbar" id="nextbar">
+    <div class="nb-row">
+      <p class="nb-t"><svg><use href="#i-shop"/></svg><span>気になるキャラを見つけたら、<span class="nw">出品一覧へ</span></span></p>
+      <div class="nb-shops">
+        <a style="--c:#ff6fa8" href="https://auctions.yahoo.co.jp/sellinglist/7mmAxUxGdHDt7fjyFD2e7cguFGdQu?fixed=0&amp;auccat=26146&amp;b=1&amp;is_postage_mode=1&amp;select=3" target="_blank" rel="noopener">ねこねこショップ</a>
+        <a style="--c:#9a7cff" href="https://auctions.yahoo.co.jp/sellinglist/7iFfpUkBLoLVPfJbYuFg6VSMXQUnH?fixed=0&amp;auccat=26146&amp;b=1" target="_blank" rel="noopener">アンティークshop</a>
+        <a style="--c:#3fb3f5" href="https://auctions.yahoo.co.jp/seller/7dEF4CbdxnUD2nix6YmBGjhp82uaZ?f=0x2&amp;fixed=0&amp;auccat=26146&amp;b=1&amp;fr=auc_adv" target="_blank" rel="noopener">ねっぴおーろ</a>
+        <a style="--c:#33c3a4" href="https://auctions.yahoo.co.jp/seller/C4J19aFyyj8Tx7Qv9oh6XeF6JnU6z?fixed=0&amp;auccat=26146&amp;b=1" target="_blank" rel="noopener">ぐるなっしゅ</a>
+      </div>
+    </div>
+    <div class="nb-row nb-mail">
+      <p class="nb-t"><svg><use href="#i-mail"/></svg><span>お得なキャンペーン情報は、<span class="nw">メルマガでお届けします</span></span></p>
+      <a class="btn sky" href="https://docs.google.com/forms/d/e/1FAIpQLSff_8JDBhhR4v01TJLgXbiaox4jvobafaizHJTGWckNsbKI6Q/viewform" target="_blank" rel="noopener"><svg><use href="#i-mail"/></svg>メルマガ登録（無料）</a>
+    </div>
+  </div>
   <div id="list"></div>
   <div class="empty" id="empty">
     <div class="card">
       <p><b>見つかりませんでした</b></p>
       <p class="muted">表記を変えて探すか（例：カタカナ・ひらがな・作品の略称）、リクエストフォームから送ってください。</p>
       <p style="margin-top:12px"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc39qKKjN-VANR0FBAguiJEsbVeLergnzShh3KVoIUSfQSo5A/viewform?usp=dialog" target="_blank" rel="noopener"><svg><use href="#i-heart"/></svg>リクエストする</a></p>
+    </div>
+  </div>
+
+  <div class="shopbar">
+    <div class="sec-title"><span class="ic c-sky"><svg><use href="#i-shop"/></svg></span><h2>出品一覧を見る</h2><span class="en">SHOPS</span></div>
+    <div class="shops">
+      <a class="shop" style="--c:#ff6fa8" href="https://auctions.yahoo.co.jp/sellinglist/7mmAxUxGdHDt7fjyFD2e7cguFGdQu?fixed=0&amp;auccat=26146&amp;b=1&amp;is_postage_mode=1&amp;select=3" target="_blank" rel="noopener"><span class="no">01</span><b>ねこねこショップ</b><small>本館・新作を毎日出品</small><span class="open">出品一覧を見る →</span></a>
+      <a class="shop" style="--c:#9a7cff" href="https://auctions.yahoo.co.jp/sellinglist/7iFfpUkBLoLVPfJbYuFg6VSMXQUnH?fixed=0&amp;auccat=26146&amp;b=1" target="_blank" rel="noopener"><span class="no">02</span><b>アンティークshop</b><small>姉妹館</small><span class="open">出品一覧を見る →</span></a>
+      <a class="shop" style="--c:#3fb3f5" href="https://auctions.yahoo.co.jp/seller/7dEF4CbdxnUD2nix6YmBGjhp82uaZ?f=0x2&amp;fixed=0&amp;auccat=26146&amp;b=1&amp;fr=auc_adv" target="_blank" rel="noopener"><span class="no">03</span><b>ねっぴおーろ</b><small>人気キャラを出品</small><span class="open">出品一覧を見る →</span></a>
+      <a class="shop" style="--c:#33c3a4" href="https://auctions.yahoo.co.jp/seller/C4J19aFyyj8Tx7Qv9oh6XeF6JnU6z?fixed=0&amp;auccat=26146&amp;b=1" target="_blank" rel="noopener"><span class="no">04</span><b>ぐるなっしゅ</b><small>レトロアニメ</small><span class="open">出品一覧を見る →</span></a>
     </div>
   </div>
 
@@ -194,6 +220,6 @@
 
 <script src="assets/data/chars.js?v=20261021"></script>
 <script src="assets/site.js"></script>
-<script src="assets/list.js?v=20261021"></script>
+<script src="assets/list.js?v=20261102"></script>
 </body>
 </html>
