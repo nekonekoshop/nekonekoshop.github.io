@@ -39,6 +39,7 @@
   var clear = document.getElementById('clear');
   var countEl = document.getElementById('count');
   var empty = document.getElementById('empty');
+  var nextbar = document.getElementById('nextbar');
   var expanded = {};
 
   function render() {
@@ -89,6 +90,9 @@
       }
     });
     list.innerHTML = html;
+    var nb = list.querySelector('.newbox');
+    if (nb) nb.parentNode.insertBefore(nextbar, nb.nextSibling); else list.parentNode.insertBefore(nextbar, list);
+    nextbar.style.display = nb ? '' : 'none';
     empty.style.display = hitWorks ? 'none' : 'block';
     countEl.innerHTML = q ? '<b>' + hitWorks + '</b> 作品 / <b>' + hitChars + '</b> 人' : '<b>' + D.works.length + '</b> 作品';
     clear.classList.toggle('show', !!input.value);

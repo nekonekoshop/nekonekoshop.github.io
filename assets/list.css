@@ -82,3 +82,18 @@
 .chip.nchip small{font-size:11px;font-weight:700;color:var(--ink-soft)}
 .nbadge{font-style:normal;font-family:var(--pop);font-size:9.5px;letter-spacing:.04em;background:var(--sun);color:var(--navy);border-radius:999px;padding:1px 6px;margin-left:5px;vertical-align:1px}
 .kana a.knew{background:var(--sun);color:var(--navy);font-size:12px}
+
+/* NEW欄の下：出品一覧・メルマガへの導線（2026-11-02） */
+.nextbar{background:#fff;border-radius:18px;padding:14px 16px;margin:10px 0 6px;box-shadow:0 4px 0 rgba(122,96,170,.08),0 10px 22px rgba(122,96,170,.10);display:grid;gap:12px}
+.nb-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.nb-t{margin:0;flex:1;min-width:220px;display:flex;align-items:center;gap:8px;font-weight:800;font-size:15px}
+.nb-t svg{width:22px;height:22px;flex:none;color:var(--sky)}
+.nb-shops{display:flex;flex-wrap:wrap;gap:8px}
+.nb-shops a{text-decoration:none;font-weight:800;font-size:13.5px;color:var(--c);background:#fff;border:2.5px solid var(--c);border-radius:999px;padding:6px 14px;transition:background .15s,color .15s}
+.nb-shops a::after{content:" →"}
+.nb-shops a:hover{background:var(--c);color:#fff}
+.nb-mail{border-top:2px dashed #e6e0f5;padding-top:12px}
+.nb-mail .btn{margin:0;padding:10px 18px;font-size:14px}
+@media (max-width:760px){.nb-shops{display:grid;grid-template-columns:1fr 1fr;width:100%}.nb-shops a{text-align:center;padding:9px 6px}.nb-mail .btn{width:100%}}
+.shopbar{margin:30px 0 0}
+.nb-t .nw{white-space:nowrap}
