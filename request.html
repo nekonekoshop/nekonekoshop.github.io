@@ -35,6 +35,11 @@
 .free{background:var(--lav-l);color:var(--ink-soft)}
 .fld input[type=text],.fld input[type=email],.fld textarea{width:100%;font:inherit;font-size:16px;padding:12px 16px;border:2.5px solid var(--line);border-radius:16px;outline:none;background:#fdfcff;color:var(--ink)}
 .fld textarea{resize:vertical;min-height:90px}
+.fld.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fld select{width:100%;font:inherit;font-size:16px;padding:12px 40px 12px 16px;border:2.5px solid var(--line);border-radius:16px;background:#fdfcff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23ff6fa8' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 16px center;-webkit-appearance:none;appearance:none;color:var(--ink);outline:none;cursor:pointer}
+.fld select:focus{border-color:var(--pink)}
+.fld small a{color:var(--pink-d);font-weight:800}
+
 .fld input:focus,.fld textarea:focus{border-color:var(--pink);background:#fff}
 .fld .bad{border-color:#e8336d;background:#fff4f7}
 .fld small{display:block;color:var(--ink-soft);font-size:13px;margin-top:4px}
@@ -55,7 +60,7 @@
 .rq-done .love{font-weight:800;color:var(--pink-d)}
 .rq-done .mm{font-size:14px;color:var(--ink-soft)}
 .rq-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-@media (max-width:640px){.rq-hero{grid-template-columns:1fr 88px;padding:16px;gap:12px}.rq-hero h1{font-size:22px}.rq-hero p{font-size:14px}.rq-card{padding:18px}.rq-done{grid-template-columns:1fr;text-align:center}.rq-done img{max-width:150px;margin:0 auto}.rq-btns{justify-content:center}}
+@media (max-width:640px){.rq-hero{grid-template-columns:1fr 88px;padding:16px;gap:12px}.rq-hero h1{font-size:22px}.rq-hero p{font-size:14px}.rq-card{padding:18px}.rq-done{grid-template-columns:1fr;text-align:center}.rq-done img{max-width:150px;margin:0 auto}.rq-btns{justify-content:center}.fld.two{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -189,10 +194,21 @@
       <label for="f-name">あなたのお名前<span class="must">必須</span></label>
       <input id="f-name" type="text" placeholder="ヤフオクのID・ニックネーム" autocomplete="nickname" required>
     </div>
+    <div class="fld two">
+      <div>
+        <label for="f-style">絵柄<span class="free">なくてOK</span></label>
+        <select id="f-style"><option value="">おまかせ</option><option value="va（セミリアル）">va（セミリアル）</option><option value="wa（現代アニメ）">wa（現代アニメ）</option><option value="ik（アニメ クラシック調）">ik（アニメ クラシック調）</option><option value="re（水彩画）">re（水彩画）</option><option value="dr（スタイリッシュ線画）">dr（スタイリッシュ線画）</option><option value="bo（アニメ）">bo（アニメ）</option><option value="ri（アーティスト系アニメ）">ri（アーティスト系アニメ）</option><option value="me（光輝くイラスト）">me（光輝くイラスト）</option><option value="bs（アニメ クラシック調2）">bs（アニメ クラシック調2）</option><option value="jk / ja / ni（レトロアニメ）">jk / ja / ni（レトロアニメ）</option><option value="mj（アニメ かわいい系）">mj（アニメ かわいい系）</option></select>
+        <small><a href="index.html#style" target="_blank" rel="noopener">絵柄の見本を見る</a></small>
+      </div>
+      <div>
+        <label for="f-shop">出品してほしいお店<span class="free">なくてOK</span></label>
+        <select id="f-shop"><option value="">おまかせ（メイン館）</option><option>ねこねこショップ（メイン館）</option><option>アンティークshop</option><option>ねっぴおーろ</option><option>ぐるなっしゅ</option></select>
+        <small>選ばないときは、メイン館で出品します</small>
+      </div>
+    </div>
     <div class="fld">
-      <label for="f-hope">絵柄・衣装・ポーズのご希望<span class="free">なくてOK</span></label>
-      <textarea id="f-hope" rows="3" placeholder="例）水着で ／ ni（リアル系）で ／ 質問もこちらへ"></textarea>
-      <small>ni の絵柄は「ぐるなっしゅ」で出品します。</small>
+      <label for="f-hope">衣装・ポーズ・質問など<span class="free">なくてOK</span></label>
+      <textarea id="f-hope" rows="3" placeholder="例）水着で ／ かんたんなポーズで"></textarea>
     </div>
     <div class="fld">
       <label for="f-mail">お返事がほしい人は、メールアドレス<span class="free">なくてOK</span></label>
@@ -218,7 +234,7 @@
     <img src="assets/img/sayo_angel.webp" alt="" width="720" height="1020">
     <div>
       <h2>リクエストありがとう！</h2>
-      <p>作れたら、<b>1週間以内</b>にメイン館（ねこねこショップ）で出品します。<br>ni の絵柄は、ぐるなっしゅ館で出品します。</p>
+      <p>作れたら、<b>1週間以内</b>に出品します。<br>お店を選んでいないときは、メイン館（ねこねこショップ）で出品します。</p>
       <p class="love">出品したら、落札してもらえるとうれしいです♪</p>
       <p class="mm" id="mm-msg" hidden>メルマガのご登録も受け付けました。確認のメールが届きます。</p>
       <div class="rq-btns">
@@ -275,7 +291,8 @@
       'entry.1967156903': m,
       'entry.2044193032': $('f-name').value.trim(),
       'entry.1460070404': $('f-work').value.trim() + ' / ' + $('f-char').value.trim(),
-      'entry.790981377': $('f-hope').value.trim(),
+      'entry.790981377': '絵柄：' + ($('f-style').value || 'おまかせ') + ' ／ 出品：' + ($('f-shop').value || 'おまかせ（メイン館）'),
+      'entry.396048012': $('f-hope').value.trim(),
       'entry.1133593286': m ? (join ? 'メルマガ登録：希望' : 'メルマガ登録：なし') : ''
     })];
     if (join) jobs.push(post(MAIL, { 'entry.2050883889': m, 'entry.1095878501': $('f-name').value.trim() }));
