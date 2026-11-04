@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HG3246N7RH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HG3246N7RH');
+</script>
+<title>キャラのリクエスト｜ねこねこショップ☆</title>
+<meta name="description" content="ねこねこショップ☆へのキャラのリクエストはこちらから。">
+<meta name="theme-color" content="#ffb3d1">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.rq{max-width:760px;padding-top:24px;padding-bottom:40px}
+.rq-hero{display:grid;grid-template-columns:1fr 150px;gap:18px;align-items:center;background:linear-gradient(135deg,#fff 20%,var(--pink-l));border:3px solid #fff;border-radius:var(--r);box-shadow:var(--shadow);padding:22px 26px}
+.rq-hero img{border-radius:16px}
+.rq-tag{font-family:var(--pop);font-size:13px;color:#fff;background:var(--pink);border-radius:999px;padding:2px 14px}
+.rq-hero h1{font-family:var(--pop);font-weight:400;font-size:clamp(26px,5vw,36px);color:var(--pink-d);margin:8px 0 4px;line-height:1.35}
+.rq-hero p{margin:0;font-weight:800}
+.rq-card{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:24px 26px;margin-top:18px}
+.fld{margin-bottom:18px}
+.fld > label{display:block;font-weight:800;font-size:16px;margin-bottom:6px}
+.must,.free{display:inline-block;font-size:12px;border-radius:999px;padding:0 9px;margin-left:8px;vertical-align:2px}
+.must{background:var(--pink);color:#fff}
+.free{background:var(--lav-l);color:var(--ink-soft)}
+.fld input[type=text],.fld input[type=email],.fld textarea{width:100%;font:inherit;font-size:16px;padding:12px 16px;border:2.5px solid var(--line);border-radius:16px;outline:none;background:#fdfcff;color:var(--ink)}
+.fld textarea{resize:vertical;min-height:90px}
+.fld input:focus,.fld textarea:focus{border-color:var(--pink);background:#fff}
+.fld .bad{border-color:#e8336d;background:#fff4f7}
+.fld small{display:block;color:var(--ink-soft);font-size:13px;margin-top:4px}
+.chk{display:flex;gap:10px;align-items:flex-start;margin-top:10px;background:var(--sky-l);border-radius:14px;padding:10px 14px;font-weight:800;cursor:pointer}
+.chk input{width:20px;height:20px;margin-top:4px;accent-color:var(--pink);flex:none}
+.chk small{font-weight:500;margin:0}
+.chk.off{opacity:.45}
+.rq-note{background:var(--sun-l);border:2px dashed var(--sun);border-radius:16px;padding:12px 16px;font-size:14px}
+.rq-note ul{margin:4px 0 0;padding-left:1.3em}
+.err{color:#d23c6e;font-weight:800;min-height:1.5em;margin:12px 0 4px}
+.rq-send{width:100%;font-size:17px;padding:15px}
+.rq-send[disabled]{opacity:.6;cursor:wait}
+.rq-done{display:grid;grid-template-columns:170px 1fr;gap:22px;align-items:center}
+.rq [hidden]{display:none}
+.rq-done img{border-radius:16px}
+.rq-done h2{font-family:var(--pop);font-weight:400;color:var(--pink-d);font-size:26px;margin:0 0 8px}
+.rq-done p{margin:0 0 8px}
+.rq-done .love{font-weight:800;color:var(--pink-d)}
+.rq-done .mm{font-size:14px;color:var(--ink-soft)}
+.rq-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+@media (max-width:640px){.rq-hero{grid-template-columns:1fr 88px;padding:16px;gap:12px}.rq-hero h1{font-size:22px}.rq-hero p{font-size:14px}.rq-card{padding:18px}.rq-done{grid-template-columns:1fr;text-align:center}.rq-done img{max-width:150px;margin:0 auto}.rq-btns{justify-content:center}}
+</style>
+</head>
+<body>
+
+<!--SPRITE-->
+<!-- アイコン -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lg-logo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8cbc"/><stop offset=".55" stop-color="#ff5f9e"/><stop offset="1" stop-color="#b77bff"/></linearGradient>
+    <linearGradient id="lg-logo2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cd3ff"/><stop offset="1" stop-color="#8b74ff"/></linearGradient>
+  </defs>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.8l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 16.7l-6.1 3.5 1.5-6.8L2.2 8.8l6.9-.7z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15zM10 21h4"/></symbol>
+  <symbol id="i-crown" viewBox="0 0 24 24"><path fill="currentColor" d="M3 7l4.5 4L12 4l4.5 7L21 7l-2 11H5z"/><rect x="5" y="19" width="14" height="2.2" rx="1" fill="currentColor"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3.5" y="8.5" width="17" height="4" rx="1"/><path d="M5 12.5V20h14v-7.5M12 8.5V20M12 8.5C10 4 6.5 5 7.5 7.4 8 8.4 12 8.5 12 8.5zM12 8.5c2-4.5 5.5-3.5 4.5-1.1-.5 1-4.5 1.1-4.5 1.1z"/></g></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 20V5M6 11l6-6 6 6M5 21h14"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 1.6-2.1-.5-1.3.4-2.4 1.7-2.4H18a3 3 0 0 0 3-3C21 7 17 3 12 3z"/><circle cx="7.5" cy="11" r="1.5" fill="currentColor"/><circle cx="10.5" cy="7" r="1.5" fill="currentColor"/><circle cx="15.5" cy="7.5" r="1.5" fill="currentColor"/></symbol>
+  <symbol id="i-shop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M4 9.5V20h16V9.5M3 9.5L5 4h14l2 5.5c0 1.5-1.2 2.5-2.6 2.5S16 11 16 9.5c0 1.5-1.3 2.5-2.7 2.5h-2.6C9.3 12 8 11 8 9.5 8 11 6.9 12 5.6 12S3 11 3 9.5zM10 20v-5h4v5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7l8 6 8-6"/></g></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.5S3.5 15 3.5 9.2A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 2.2C20.5 15 12 20.5 12 20.5z"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.2" fill="currentColor"/><circle cx="4.5" cy="12" r="1.2" fill="currentColor"/><circle cx="4.5" cy="18" r="1.2" fill="currentColor"/></g></symbol>
+  <symbol id="i-q" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.3 9.3a2.8 2.8 0 1 1 3.8 2.6c-.7.3-1.1.9-1.1 1.7v.6"/></g><circle cx="12" cy="17.3" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M2.5 6h11v10h-11zM13.5 9.5h4l3 3.5V16h-7z"/><circle cx="6.5" cy="17.5" r="1.8" fill="#fff"/><circle cx="17" cy="17.5" r="1.8" fill="#fff"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M8 12.3l2.7 2.7L16.3 9"/></g></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L20 20"/></g></symbol>
+  <symbol id="i-top" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" d="M6 14l6-6 6 6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5"/></g><circle cx="12" cy="16.5" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-data" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18.5a4.5 4.5 0 0 1-.6-9A6 6 0 0 1 18 8.6a4 4 0 0 1-.5 7.9"/><path d="M12 11v9M9 17l3 3 3-3"/></g></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g><circle cx="12" cy="15" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24"><g fill="currentColor"><ellipse cx="12" cy="16" rx="5" ry="4.2"/><ellipse cx="5.5" cy="10.5" rx="2" ry="2.6"/><ellipse cx="9.3" cy="6.4" rx="2" ry="2.7"/><ellipse cx="14.7" cy="6.4" rx="2" ry="2.7"/><ellipse cx="18.5" cy="10.5" rx="2" ry="2.6"/></g></symbol>
+  <symbol id="i-redo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" d="M4.5 12a7.5 7.5 0 0 1 13-5.1M19.5 12a7.5 7.5 0 0 1-13 5.1M17.8 3.5v3.7h-3.7M6.2 20.5v-3.7h3.7"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+
+  <!-- ロゴ（大） -->
+  <symbol id="logo-big" viewBox="0 0 640 230">
+    <g font-family="Mochiy Pop One, M PLUS Rounded 1c, sans-serif" text-anchor="start">
+      <!-- ねこみみ -->
+      <g stroke-linejoin="round">
+        <path d="M58 70 L70 14 L112 52 Z M150 52 L190 12 L200 68 Z" fill="#2d2a5a" stroke="#2d2a5a" stroke-width="22"/>
+        <path d="M58 70 L70 14 L112 52 Z M150 52 L190 12 L200 68 Z" fill="#fff" stroke="#fff" stroke-width="12"/>
+        <path d="M60 66 L71 18 L108 52 Z M154 52 L189 16 L198 64 Z" fill="#ff7fb3"/>
+        <path d="M72 52 L76 32 L94 50 Z M168 50 L184 33 L187 52 Z" fill="#ffd0e3"/>
+      </g>
+      <g font-size="112" letter-spacing="-2">
+        <text x="34" y="150" fill="#2d2a5a" stroke="#2d2a5a" stroke-width="26" stroke-linejoin="round">ねこねこ</text>
+        <text x="34" y="150" fill="#fff" stroke="#fff" stroke-width="14" stroke-linejoin="round">ねこねこ</text>
+        <text x="34" y="150" fill="url(#lg-logo)">ねこねこ</text>
+      </g>
+      <g font-size="70" letter-spacing="-1">
+        <text x="250" y="214" fill="#2d2a5a" stroke="#2d2a5a" stroke-width="22" stroke-linejoin="round">ショップ</text>
+        <text x="250" y="214" fill="#fff" stroke="#fff" stroke-width="12" stroke-linejoin="round">ショップ</text>
+        <text x="250" y="214" fill="url(#lg-logo2)">ショップ</text>
+      </g>
+      <!-- ほっぺ -->
+      <ellipse cx="78" cy="132" rx="9" ry="5" fill="#ffb3cf" opacity=".9"/>
+      <!-- 星 -->
+      <g transform="translate(560 128) rotate(12)">
+        <path d="M0 -40 L11 -13 L40 -12 L17 6 L25 34 L0 18 L-25 34 L-17 6 L-40 -12 L-11 -13 Z" fill="#2d2a5a" stroke="#2d2a5a" stroke-width="18" stroke-linejoin="round"/>
+        <path d="M0 -40 L11 -13 L40 -12 L17 6 L25 34 L0 18 L-25 34 L-17 6 L-40 -12 L-11 -13 Z" fill="#fff" stroke="#fff" stroke-width="9" stroke-linejoin="round"/>
+        <path d="M0 -40 L11 -13 L40 -12 L17 6 L25 34 L0 18 L-25 34 L-17 6 L-40 -12 L-11 -13 Z" fill="#ffd23f"/>
+        <circle cx="-8" cy="-8" r="5" fill="#fff" opacity=".8"/>
+      </g>
+      <!-- リボン -->
+      <g transform="translate(36 172) rotate(-4)">
+        <rect x="0" y="0" width="196" height="36" rx="18" fill="#2d2a5a"/>
+        <rect x="4" y="4" width="188" height="28" rx="14" fill="#fff"/>
+        <text x="98" y="25" font-family="Mochiy Pop One, sans-serif" font-size="15.5" letter-spacing="2.4" fill="#8b6cff" text-anchor="middle">NEKONEKO SHOP</text>
+      </g>
+      <g fill="#fff"><circle cx="600" cy="54" r="7"/><circle cx="618" cy="84" r="4"/><circle cx="236" cy="40" r="5"/></g>
+      <path d="M520 60 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z" fill="#fff"/>
+    </g>
+  </symbol>
+
+  <!-- ロゴ（ヘッダー用・横長） -->
+  <symbol id="logo-bar" viewBox="0 0 300 64">
+    <g font-family="Mochiy Pop One, M PLUS Rounded 1c, sans-serif" font-size="30">
+      <path d="M14 22 L18 4 L32 16 Z M44 16 L58 3 L61 21 Z" fill="#ff7fb3" stroke="#2d2a5a" stroke-width="3" stroke-linejoin="round"/>
+      <text x="8" y="50" fill="#2d2a5a" stroke="#2d2a5a" stroke-width="9" stroke-linejoin="round">ねこねこショップ</text>
+      <text x="8" y="50" fill="#fff" stroke="#fff" stroke-width="4.5" stroke-linejoin="round">ねこねこショップ</text>
+      <text x="8" y="50" fill="url(#lg-logo)">ねこねこ</text>
+      <text x="128" y="50" fill="url(#lg-logo2)">ショップ</text>
+      <g transform="translate(268 34) rotate(12)"><path d="M0 -15 L4 -5 L15 -4.5 L6.5 2.3 L9.5 12.8 L0 6.8 L-9.5 12.8 L-6.5 2.3 L-15 -4.5 L-4 -5 Z" fill="#ffd23f" stroke="#2d2a5a" stroke-width="3" stroke-linejoin="round"/></g>
+    </g>
+  </symbol>
+</svg>
+<!--/SPRITE-->
+
+<div class="sky-deco" aria-hidden="true">
+  <svg class="s1" viewBox="0 0 24 24"><use href="#i-star"/></svg>
+  <svg class="s2" viewBox="0 0 24 24"><use href="#i-star"/></svg>
+  <svg class="s3" viewBox="0 0 24 24"><use href="#i-star"/></svg>
+  <svg class="s4" viewBox="0 0 24 24"><use href="#i-star"/></svg>
+</div>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="ねこねこショップ☆ お知らせへ"><svg viewBox="0 0 300 64"><use href="#logo-bar"/></svg></a>
+    <nav class="nav" aria-label="メニュー">
+      <a href="index.html">お知らせ</a>
+      <a href="index.html#rank">ランク・料金</a>
+      <a href="index.html#campaign">おまとめ特典</a>
+      <a href="index.html#qa">Q&amp;A</a>
+      <a href="list.html">制作可能キャラ</a>
+      <a href="index.html#mail">メルマガ・リクエスト</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap rq">
+
+  <section class="rq-hero">
+    <div>
+      <span class="rq-tag">REQUEST</span>
+      <h1>キャラのリクエスト</h1>
+      <p>作ってほしいキャラを教えてね。<br>作れたら、ヤフオクに出品します♪</p>
+    </div>
+    <img src="assets/img/sayo_hello.webp" alt="看板娘のさよ" width="720" height="1020">
+  </section>
+
+  <form id="rqform" class="rq-card" novalidate>
+    <div class="fld">
+      <label for="f-char">キャラの名前<span class="must">必須</span></label>
+      <input id="f-char" type="text" placeholder="例）ドロンジョ" autocomplete="off" required>
+    </div>
+    <div class="fld">
+      <label for="f-work">作品の名前<span class="must">必須</span></label>
+      <input id="f-work" type="text" placeholder="例）ヤッターマン" autocomplete="off" required>
+    </div>
+    <div class="fld">
+      <label for="f-name">あなたのお名前<span class="must">必須</span></label>
+      <input id="f-name" type="text" placeholder="ヤフオクのID・ニックネーム" autocomplete="nickname" required>
+    </div>
+    <div class="fld">
+      <label for="f-hope">絵柄・衣装・ポーズのご希望<span class="free">なくてOK</span></label>
+      <textarea id="f-hope" rows="3" placeholder="例）水着で ／ ni（リアル系）で ／ 質問もこちらへ"></textarea>
+      <small>ni の絵柄は「ぐるなっしゅ」で出品します。</small>
+    </div>
+    <div class="fld">
+      <label for="f-mail">お返事がほしい人は、メールアドレス<span class="free">なくてOK</span></label>
+      <input id="f-mail" type="email" placeholder="example@mail.com" autocomplete="email" inputmode="email">
+      <small>作れるかどうか・出品したときに、お知らせします。</small>
+      <label class="chk" id="chk-wrap"><input id="f-mm" type="checkbox" checked><span>メルマガにも登録する<small>お得なキャンペーンが届きます（いつでも止められます）</small></span></label>
+    </div>
+
+    <div class="rq-note">
+      <b>ご注意</b>
+      <ul>
+        <li>性器の見える画像は作れません</li>
+        <li>ポーズは、かんたんなものだけです</li>
+        <li>制作できないキャラ・ポーズもあります</li>
+      </ul>
+    </div>
+
+    <p class="err" id="err" role="alert"></p>
+    <button class="btn rq-send" type="submit" id="send"><svg><use href="#i-heart"/></svg><span>リクエストを送る</span></button>
+  </form>
+
+  <section class="rq-card rq-done" id="done" hidden>
+    <img src="assets/img/sayo_angel.webp" alt="" width="720" height="1020">
+    <div>
+      <h2>リクエストありがとう！</h2>
+      <p>作れたら、<b>1週間以内</b>にメイン館（ねこねこショップ）で出品します。<br>ni の絵柄は、ぐるなっしゅ館で出品します。</p>
+      <p class="love">出品したら、落札してもらえるとうれしいです♪</p>
+      <p class="mm" id="mm-msg" hidden>メルマガのご登録も受け付けました。確認のメールが届きます。</p>
+      <div class="rq-btns">
+        <a class="btn" href="list.html">キャラ一覧へもどる</a>
+        <a class="btn sky" href="request.html">もう1人リクエストする</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="flogo"><svg viewBox="0 0 300 64" role="img" aria-label="ねこねこショップ☆"><use href="#logo-bar"/></svg></div>
+    <nav><a href="index.html">お知らせ</a><a href="index.html#rank">ランク</a><a href="index.html#campaign">おまとめ特典</a><a href="index.html#qa">Q&amp;A</a><a href="list.html">制作可能キャラ</a></nav>
+    <p>ブックマークしておくと便利です ☆<br>成人向けの作品を含みます。</p>
+  </div>
+</footer>
+
+<a class="totop" id="totop" href="#top" aria-label="ページの先頭へ"><svg><use href="#i-top"/></svg></a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  // 送り先：今のGoogleフォーム（リクエスト・メルマガ登録）。回答シートと自動返信はそのまま使う
+  var REQ = 'https://docs.google.com/forms/d/e/1FAIpQLSc39qKKjN-VANR0FBAguiJEsbVeLergnzShh3KVoIUSfQSo5A/formResponse';
+  var MAIL = 'https://docs.google.com/forms/d/e/1FAIpQLSff_8JDBhhR4v01TJLgXbiaox4jvobafaizHJTGWckNsbKI6Q/formResponse';
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('rqform'), err = $('err'), mail = $('f-mail'), mm = $('f-mm'), wrap = $('chk-wrap'), send = $('send');
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function syncChk() { wrap.classList.toggle('off', !mail.value.trim()); }
+  mail.addEventListener('input', syncChk); syncChk();
+  form.addEventListener('input', function (e) { e.target.classList.remove('bad'); err.textContent = ''; });
+
+  function post(url, data) {
+    var body = new URLSearchParams();
+    Object.keys(data).forEach(function (k) { body.append(k, data[k]); });
+    return fetch(url, { method: 'POST', mode: 'no-cors', body: body });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var miss = ['f-char', 'f-work', 'f-name'].filter(function (id) { return !$(id).value.trim(); });
+    miss.forEach(function (id) { $(id).classList.add('bad'); });
+    if (miss.length) { err.textContent = '「必須」のところを入れてね'; $(miss[0]).focus(); return; }
+    var m = mail.value.trim();
+    if (m && !EMAIL.test(m)) { mail.classList.add('bad'); err.textContent = 'メールアドレスの形を確かめてね'; mail.focus(); return; }
+    var join = !!m && mm.checked, label = send.querySelector('span');
+    send.disabled = true; label.textContent = '送っています…';
+    var jobs = [post(REQ, {
+      'entry.1967156903': m,
+      'entry.2044193032': $('f-name').value.trim(),
+      'entry.1460070404': $('f-work').value.trim() + ' / ' + $('f-char').value.trim(),
+      'entry.790981377': $('f-hope').value.trim(),
+      'entry.1133593286': m ? (join ? 'メルマガ登録：希望' : 'メルマガ登録：なし') : ''
+    })];
+    if (join) jobs.push(post(MAIL, { 'entry.2050883889': m, 'entry.1095878501': $('f-name').value.trim() }));
+    Promise.all(jobs).then(function () {
+      form.hidden = true; $('done').hidden = false; $('mm-msg').hidden = !join;
+      if (typeof gtag === 'function') gtag('event', 'request_send', { mail_join: join ? 'yes' : 'no' });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }).catch(function () {
+      send.disabled = false; label.textContent = 'リクエストを送る';
+      err.textContent = 'うまく送れませんでした。通信を確かめて、もう一度押してください。';
+    });
+  });
+})();
+</script>
+</body>
+</html>
