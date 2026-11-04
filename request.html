@@ -197,13 +197,13 @@
     <div class="fld two">
       <div>
         <label for="f-style">絵柄<span class="free">なくてOK</span></label>
-        <select id="f-style"><option value="">おまかせ</option><option value="va（セミリアル）">va（セミリアル）</option><option value="wa（現代アニメ）">wa（現代アニメ）</option><option value="ik（アニメ クラシック調）">ik（アニメ クラシック調）</option><option value="re（水彩画）">re（水彩画）</option><option value="dr（スタイリッシュ線画）">dr（スタイリッシュ線画）</option><option value="bo（アニメ）">bo（アニメ）</option><option value="ri（アーティスト系アニメ）">ri（アーティスト系アニメ）</option><option value="me（光輝くイラスト）">me（光輝くイラスト）</option><option value="bs（アニメ クラシック調2）">bs（アニメ クラシック調2）</option><option value="jk / ja / ni（レトロアニメ）">jk / ja / ni（レトロアニメ）</option><option value="mj（アニメ かわいい系）">mj（アニメ かわいい系）</option></select>
+        <input id="f-style" type="text" placeholder="例）wa（現代アニメ）" autocomplete="off">
         <small><a href="index.html#style" target="_blank" rel="noopener">絵柄の見本を見る</a></small>
       </div>
       <div>
-        <label for="f-shop">出品してほしいお店<span class="free">なくてOK</span></label>
-        <select id="f-shop"><option value="">おまかせ（メイン館）</option><option>ねこねこショップ（メイン館）</option><option>アンティークshop</option><option>ねっぴおーろ</option><option>ぐるなっしゅ</option></select>
-        <small>選ばないときは、メイン館で出品します</small>
+        <label for="f-shop">出品してほしいお店</label>
+        <select id="f-shop"><option selected>ねこねこショップ（メイン館）</option><option>アンティークshop</option><option>ねっぴおーろ</option><option>ぐるなっしゅ</option></select>
+        <small>迷ったら、メイン館のままでOK</small>
       </div>
     </div>
     <div class="fld">
@@ -234,7 +234,7 @@
     <img src="assets/img/sayo_angel.webp" alt="" width="720" height="1020">
     <div>
       <h2>リクエストありがとう！</h2>
-      <p>作れたら、<b>1週間以内</b>に出品します。<br>お店を選んでいないときは、メイン館（ねこねこショップ）で出品します。</p>
+      <p>作れたら、<b>1週間以内</b>に、選んだお店で出品します。</p>
       <p class="love">出品したら、落札してもらえるとうれしいです♪</p>
       <p class="mm" id="mm-msg" hidden>メルマガのご登録も受け付けました。確認のメールが届きます。</p>
       <div class="rq-btns">
@@ -291,7 +291,7 @@
       'entry.1967156903': m,
       'entry.2044193032': $('f-name').value.trim(),
       'entry.1460070404': $('f-work').value.trim() + ' / ' + $('f-char').value.trim(),
-      'entry.790981377': '絵柄：' + ($('f-style').value || 'おまかせ') + ' ／ 出品：' + ($('f-shop').value || 'おまかせ（メイン館）'),
+      'entry.790981377': '絵柄：' + ($('f-style').value.trim() || 'おまかせ') + ' ／ 出品：' + $('f-shop').value,
       'entry.396048012': $('f-hope').value.trim(),
       'entry.1133593286': m ? (join ? 'メルマガ登録：希望' : 'メルマガ登録：なし') : ''
     })];
