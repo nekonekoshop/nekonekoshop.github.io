@@ -362,3 +362,17 @@ footer nav a{color:var(--ink);font-weight:700;text-decoration:none}
   .hw-table .r > span:first-child{padding-left:8px}
   .hw-cta{flex-direction:column;align-items:stretch}
 }
+
+/* ===== お客さまの声（11/9） ===== */
+.voices{columns:3 280px;column-gap:14px}
+.voice{break-inside:avoid;position:relative;background:#fff;border-radius:18px;border:3px solid #fff;box-shadow:var(--shadow);padding:18px 18px 14px 18px;margin:0 0 14px;font-weight:700;font-size:15px;line-height:1.75}
+.voice::before{content:"“";position:absolute;left:12px;top:-8px;font-family:Georgia,serif;font-size:54px;line-height:1;color:var(--pink);opacity:.35}
+.voice .st{display:block;color:var(--sun);font-size:13px;letter-spacing:2px;margin-bottom:4px}
+.voice.pk{background:var(--pink-l)}.voice.lv{background:var(--lav-l)}.voice.sk{background:var(--sky-l)}
+.voice-more{display:none}
+@media (max-width:760px){
+  .voices:not(.open) .voice:nth-child(n+7){display:none}
+  .voice-more{display:flex;justify-content:center;margin-top:4px}
+  .voices.open + .voice-more{display:none}
+  .voice-more button{font:inherit;font-weight:800;color:var(--pink-d);background:#fff;border:2px solid var(--pink);border-radius:999px;padding:9px 22px;cursor:pointer}
+}
