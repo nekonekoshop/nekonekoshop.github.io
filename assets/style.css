@@ -206,14 +206,14 @@ section.block{padding:30px 0 10px}
 @media (max-width:420px){.styles{grid-template-columns:repeat(2,1fr);gap:10px}}
 
 /* アカウント */
-.shops{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.shops{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .shop{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink);background:#fff;border-radius:20px;padding:16px;box-shadow:var(--shadow);border:3px solid #fff;transition:transform .15s}
 .shop:hover{transform:translateY(-3px)}
 .shop .no{font-family:var(--pop);font-size:12px;color:#fff;background:var(--c);border-radius:999px;padding:1px 10px;align-self:flex-start}
 .shop b{font-size:16px}
 .shop small{color:var(--ink-soft);font-size:12.5px}
 .shop .open{margin-top:auto;padding-top:6px;font-size:13px;font-weight:800;color:var(--c)}
-@media (max-width:900px){.shops{grid-template-columns:1fr 1fr}}
+@media (max-width:700px){.shops{grid-template-columns:1fr}}
 
 /* CTA */
 .cta{display:flex;flex-direction:column;gap:10px;border-radius:var(--r);padding:22px;box-shadow:var(--shadow);border:3px solid #fff;color:var(--ink);position:relative;overflow:hidden}
