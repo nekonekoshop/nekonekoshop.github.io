@@ -206,7 +206,7 @@ section.block{padding:30px 0 10px}
 @media (max-width:420px){.styles{grid-template-columns:repeat(2,1fr);gap:10px}}
 
 /* アカウント */
-.shops{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.shops{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .shop{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink);background:#fff;border-radius:20px;padding:16px;box-shadow:var(--shadow);border:3px solid #fff;transition:transform .15s}
 .shop:hover{transform:translateY(-3px)}
 .shop .no{font-family:var(--pop);font-size:12px;color:#fff;background:var(--c);border-radius:999px;padding:1px 10px;align-self:flex-start}
@@ -409,3 +409,7 @@ footer nav a{color:var(--ink);font-weight:700;text-decoration:none}
 .shot-row span{white-space:nowrap}
 @media (max-width:520px){.shot-row{flex-wrap:wrap}}
 @media (max-width:640px){#words .kv{grid-template-columns:1fr;gap:2px}#words .kv dt{margin-top:10px}#words .kv dd{padding-left:2px}}
+
+.shop.paused{filter:grayscale(.55);opacity:.85;cursor:default}.shop.paused:hover{transform:none}.shop.paused .open{color:var(--ink-soft)}
+@media (max-width:900px){.shops{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){.shops{grid-template-columns:1fr}}
